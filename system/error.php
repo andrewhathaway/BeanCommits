@@ -13,7 +13,7 @@ class Error {
 	}
 
 	public function trigger($message) {
-		echo $message;
+		echo $message; die;
 	}
 
 }

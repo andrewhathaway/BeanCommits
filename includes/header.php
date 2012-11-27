@@ -4,6 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Beanstalk Commit Feed</title>
+	<?php $html->css(); ?>
 </head>
 <body>
 	
