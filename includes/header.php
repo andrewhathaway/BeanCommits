@@ -3,7 +3,7 @@
 <html lang="en-US">
 <head>
 	<meta charset="UTF-8">
-	<title>Blogcase Commits</title>
+	<title>Beanstalk Commit Feed</title>
 </head>
 <body>
 	
