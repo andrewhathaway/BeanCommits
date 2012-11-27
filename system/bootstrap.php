@@ -1,17 +1,15 @@
 <?php
 
 	spl_autoload_register(function($class) {
-		$path = 'system/' . $class . '.php';
+		$path = ROOT . '/system/' . $class . '.php';
 		if(file_exists($path)) {
 			include($path);
 		} else {
 			echo "Error loading Class" . $path;
 		}
 	});
-	
-	$html = Html::getInstance();
+
 	$error = Error::getInstance();
-	$beanstalk = Beanstalk::getInstance();
 
 	//Setup the config file
 	if(file_exists('system/config.php')) {

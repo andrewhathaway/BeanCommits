@@ -12,7 +12,7 @@ class Html {
 		return self::$Instance;
 	}
 
-	//Includes CSS files depending on Config
+	//Includes CSS file(s) depending on Config
 	public function css() {
 		global $config;
 
@@ -29,6 +29,7 @@ class Html {
 		}
 	}
 
+	//Saves repeating
 	public function echoCSS($file) {
 		echo '<link rel="stylesheet" href="css/' . $file . '.css">';
 	}
