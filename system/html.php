@@ -12,6 +12,7 @@ class Html {
 		return self::$Instance;
 	}
 
+	//Includes CSS files depending on Config
 	public function css() {
 		global $config;
 
