@@ -3,7 +3,7 @@
 <html lang="en-US">
 <head>
 	<meta charset="UTF-8">
-	<title></title>
+	<title>Blogcase Commits</title>
 </head>
 <body>
 	

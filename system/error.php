@@ -1,17 +1,19 @@
 <?php
 
-class Beanstalk {
-			
+class Error {
+
 	private static $Instance;
 
 	public static function getInstance() {
 		if(!self::$Instance) {
-			self::$Instance = new Beanstalk();
+			self::$Instance = new Error();
 		}
 
 		return self::$Instance;
 	}
 
-	
+	public function trigger($message) {
+		echo $message;
+	}
 
 }
