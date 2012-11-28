@@ -1,15 +1,9 @@
 <?php
 
-	spl_autoload_register(function($class) {
-		$path = ROOT . '/system/' . $class . '.php';
-		if(file_exists($path)) {
-			include($path);
-		} else {
-			echo "Error loading Class" . $path;
-		}
-	});
+	include 'autoload.php';
 
-	$error = Error::getInstance();
+	$html = Html::getInstance();
+	$error = Error::getInstance();	
 
 	//Setup the config file
 	if(file_exists('system/config.php')) {
