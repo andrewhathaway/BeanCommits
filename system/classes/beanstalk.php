@@ -12,12 +12,10 @@ class Beanstalk {
 		return self::$Instance;
 	}
 
-	public function __construct(){
-		$error = Error::getInstance();
-	}
-
 	public function request($type, $endpoint, $data = array()) {
-		global $config, $error;
+		global $config;
+		$error = Error::getInstance();
+
 		$base = "http://" . $config['account'] . ".beanstalkapp.com/api/";
 
 		$curl = curl_init();
@@ -47,7 +45,6 @@ class Beanstalk {
 		$json = json_decode($response, true);
 
 		if(isset($json['errors'])) {
-			//Trigger error with message
 			$message = $json['errors'][0];
 			$error->trigger($message);
 		} else {
