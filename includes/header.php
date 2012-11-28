@@ -1,3 +1,4 @@
+<?php $html = Html::getInstance(); ?>
 <!DOCTYPE HTML>
 <html lang="en-US">
 <head>

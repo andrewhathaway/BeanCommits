@@ -1,9 +1,10 @@
 <?php defined('SELF') or die();
+
+	//BEANCOMMITS
 	
 	//Only class to be manually included
 	include_once('autoload.php');
-
-	$html = Html::getInstance();
+	
 	$error = Error::getInstance();	
 
 	if(file_exists(SYS . 'config.php')) {
@@ -16,7 +17,7 @@
 		}
 	}
 
-	//Run content
+	//Run the applicatiomn
 	include_once(APP . 'index.php');
 
 

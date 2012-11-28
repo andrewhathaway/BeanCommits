@@ -9,5 +9,5 @@
 	define('APP', ROOT . '/application/');
 	define('SYS', ROOT . '/system/');
 
-	//Boot BeanCommits
+	//Run BeanCommits http://bukk.it/run.gif
 	include_once('system/bootstrap.php');
