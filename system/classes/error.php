@@ -13,8 +13,8 @@ class Error {
 	}
 
 	public function trigger($message) {
-		//Temp trigger
-		echo $message; die;
+		$content = '<div class="error-message"><h2>Oh noes!</h2><p>' . $message . '</p></div>';
+		echo $content; die;
 	}
 
 }
