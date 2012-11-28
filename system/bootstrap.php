@@ -1,6 +1,8 @@
 <?php defined('SELF') or die();
 
-	//BEANCOMMITS
+	//BEANCOMMITS 
+
+	//This file sets up config files and then runs the application
 	
 	//Only class to be manually included
 	include_once('autoload.php');
@@ -17,7 +19,7 @@
 		}
 	}
 
-	//Run the applicatiomn
+	//Run the application
 	include_once(APP . 'index.php');
 
 

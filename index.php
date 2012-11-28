@@ -1,4 +1,6 @@
 <?php 
+
+	//BEANCOMMITS -> This file sets defintions up and runs the Bootstrap
 		
 	//Running in system
 	define('SELF', true);
@@ -10,4 +12,4 @@
 	define('SYS', ROOT . '/system/');
 
 	//Run BeanCommits - http://bukk.it/run.gif
-	include_once('system/bootstrap.php');
+	include_once(SYS . 'bootstrap.php');

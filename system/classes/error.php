@@ -13,6 +13,7 @@ class Error {
 	}
 
 	public function trigger($message) {
+		//Temp trigger
 		echo $message; die;
 	}
 
