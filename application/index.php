@@ -1,5 +1,5 @@
-<?php defined('SELF') or die();
-	
+<?php defined('SELF') or die(); 
+
 	include_once(INCLUDES . 'header.php');
 ?>
 
