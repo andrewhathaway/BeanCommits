@@ -1,7 +1,8 @@
-<?php
+<?php defined('SELF') or die();
 
 	spl_autoload_register(function($class) {
-		$path = ROOT . '/system/classes/' . $class . '.php';
+		$path = SYS . 'classes/' . $class . '.php';
+
 		if(file_exists($path)) {
 			include($path);
 		} else {

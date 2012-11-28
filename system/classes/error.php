@@ -1,4 +1,4 @@
-<?php
+<?php defined('SELF') or die();
 
 class Error {
 

@@ -1,6 +1,13 @@
 <?php 
-	define('ROOT', pathinfo(__FILE__, PATHINFO_DIRNAME) . '/');
-	include_once('includes/header.php'); 
-?>
+		
+	//Running in system
+	define('SELF', true);
 
-<?php include_once('includes/footer.php'); ?>
+	//Define some paths
+	define('ROOT', pathinfo(__FILE__, PATHINFO_DIRNAME) . '/');
+	define('INCLUDES', ROOT . '/includes/');
+	define('APP', ROOT . '/application/');
+	define('SYS', ROOT . '/system/');
+
+	//Boot BeanCommits
+	include_once('system/bootstrap.php');
