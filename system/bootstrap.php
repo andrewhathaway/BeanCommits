@@ -5,12 +5,12 @@
 	//This file sets up config files and then runs the application
 	
 	//Only class to be manually included
-	include_once('autoload.php');
+	include_once(SYS . 'autoload.php');
 	
 	$error = Error::getInstance();	
 
 	if(file_exists(SYS . 'config.php')) {
-		$config = require_once('system/config.php');
+		$config = require_once(SYS . 'config.php');
 	} else {
 		if(file_exists(SYS . 'config.php.default')) {
 			$error->trigger('Rename config.php.default to config.php and enter details');
