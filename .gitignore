@@ -1,5 +1,5 @@
 .DS_Store
-.sass-cache
 system/config.php
-config.rb
-sass
+application/sass
+application/config.rb
+application/.sass-cache
