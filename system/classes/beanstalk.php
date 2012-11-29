@@ -12,7 +12,7 @@ class Beanstalk {
 		return self::$Instance;
 	}
 
-	public function request($type, $endpoint, $data = array()) {
+	public function request($type, $endpoint, $data = array(), $forceError = false) {
 		global $config;
 		$error = Error::getInstance();
 
@@ -43,6 +43,10 @@ class Beanstalk {
 
 		$response = curl_exec($curl);
 		$json = json_decode($response, true);
+
+		if($forceError == true) {
+			$json['errors'][0] = "This is a forced error. For testing, obviously.";
+		}
 
 		if(isset($json['errors'])) {
 			$message = $json['errors'][0];

@@ -26,12 +26,13 @@ class Html {
 			}
 		} else {
 			$this->echoCSS('screen');
+			$this->echoCSS('animate.min');
 		}
 	}
 
 	//Saves repeating
 	public function echoCSS($file) {
-		echo '<link rel="stylesheet" href="css/' . $file . '.css">';
+		echo '<link rel="stylesheet" href="application/css/' . $file . '.css">';
 	}
 
 }

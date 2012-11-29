@@ -12,9 +12,9 @@ class Error {
 		return self::$Instance;
 	}
 
-	public function trigger($message) {
-		$content = '<div class="error-message"><h2>Oh noes!</h2><p>' . $message . '</p></div>';
-		echo $content; die;
+	public function trigger($error_message) {
+		include_once(APP . 'error.php');
+		die; // Stop rest of page loading
 	}
 
 }
