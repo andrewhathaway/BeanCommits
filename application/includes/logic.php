@@ -6,4 +6,4 @@
 	$html = Html::getInstance();
 	$beanstalk = Beanstalk::getInstance();
 
-	var_dump($beanstalk->request("GET", "changesets", array(), true));
+	$feed = $beanstalk->request("GET", "changesets");

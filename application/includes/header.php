@@ -7,4 +7,9 @@
 	<?php $html->css(); ?>
 </head>
 <body>
+	<div class="header">
+		<section class="container">
+			<h1><?=$config['header_title']?></h1>
+		</section>
+	</div>
 	

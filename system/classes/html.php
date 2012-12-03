@@ -35,4 +35,8 @@ class Html {
 		echo '<link rel="stylesheet" href="application/css/' . $file . '.css">';
 	}
 
+	public function getGravatar($email) {
+		return "http://www.gravatar.com/avatar/" . md5(strtolower($email));
+	}
+
 }
