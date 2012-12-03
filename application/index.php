@@ -11,6 +11,7 @@
 				<img src="<?php echo $html->getGravatar($item['email']); ?>">
 				<div class="information">
 					<h3><?=$item['message']?></h3>
+					<p>In repo <?=$repositories[$item['repository_id']]?></p>
 				</div>
 				<div class="clear"></div>
 			</li>
