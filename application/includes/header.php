@@ -5,11 +5,13 @@
 	<meta charset="UTF-8">
 	<title>Beanstalk Commit Feed</title>
 	<?php $html->css(); ?>
+	<meta name="viewport" content="initial-scale=1.0">
 </head>
 <body>
 	<div class="header">
 		<section class="container">
-			<h1><?=$config['header_title']?></h1>
+			<h1 class="float-left"><?=$config['header_title']?></h1>
+			<a href="#" class="button float-right small">RESET</a>
 		</section>
 	</div>
 	
