@@ -11,12 +11,13 @@
 				<img src="<?php echo $html->getGravatar($item['email']); ?>">
 				<div class="information">
 					<h3><?=$item['message']?></h3>
-					<p>In repo <?=$repositories[$item['repository_id']]?></p>
+					<p>In repo <?=$repositories[$item['repository_id']]?> & <?=count($item['changed_files'])?> files changed. <?=date("l jS F Y - h:i A",strtotime($item['time']))?></p>
 				</div>
 				<div class="clear"></div>
 			</li>
 		<?php endforeach; ?>
 	</ul>
+	<a href="#" class="button">Load More</a>
 </section>
 
 <?php include_once(INCLUDES . 'footer.php') ?>
