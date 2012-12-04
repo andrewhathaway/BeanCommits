@@ -14,7 +14,8 @@
 			$item = $item['revision_cache'];
 			$changed_files = count($item['changed_files']);
 			$repository = $repositories[$item['repository_id']];
-			$time = date("l jS F Y - h:i A", strtotime($item['time']));
+			//$time = date("l jS F Y - h:i A", strtotime($item['time']));
+			$time = $html->time_elapsed_string(strtotime($item['time'])) . " ago";
 		?>
 
 			<li>	
@@ -22,7 +23,7 @@
 
 				<div class="information">
 					<h3><?=$item['message']?></h3>
-					<p>Made <?=$changed_files?> changes in repository <?=$repository?> on <?=$time?></p>
+					<p>Made <?=$changed_files?> changes in <b><?=$repository?></b> - <?=$time?></p>
 					<a href="https://blogcase.beanstalkapp.com/commit-feed/changesets/<?=$item['hash_id']?>">View Commit on Beanstalk</a>
 				</div>
 
