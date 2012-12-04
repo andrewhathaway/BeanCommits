@@ -21,8 +21,9 @@
 				<img src="<?php echo $html->getGravatar($item['email']); ?>">
 
 				<div class="information">
-					<h3><?=$item['message']?> - <span><?=$item['author']?></span></h3>
-					<p>Commit made <?=$changed_files?> changes in repository <?=$repository?> at <?=$time?> - <a href="https://blogcase.beanstalkapp.com/commit-feed/changesets/<?=$item['hash_id']?>">View Commit on Beanstalk</a></p>
+					<h3><?=$item['message']?></h3>
+					<p>Made <?=$changed_files?> changes in repository <?=$repository?> on <?=$time?></p>
+					<a href="https://blogcase.beanstalkapp.com/commit-feed/changesets/<?=$item['hash_id']?>">View Commit on Beanstalk</a>
 				</div>
 
 				<div class="clear"></div>
