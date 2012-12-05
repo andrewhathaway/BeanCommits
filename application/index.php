@@ -7,7 +7,7 @@
 
 <section class="container main-body">
 
-	<ul class="feed">
+	<ul class="feed" id="feed">
 
 		<?php foreach($feed as $item): 
 			//Setup item informatiomn
@@ -33,7 +33,12 @@
 
 	</ul>
 
-	<a href="<?=$html->currentURL().'?page=2'?>" class="button">LOAD MORE</a>
+	<?php 
+		$page = 2;
+		if(isset($_GET['page'])) $page = $_GET['page'] + 1;
+	?>
+
+	<a href="<?=$html->baseURL().'?page='.$page?>" class="button" id="load-more">LOAD MORE</a>
 
 </section>
 
