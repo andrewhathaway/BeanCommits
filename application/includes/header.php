@@ -11,7 +11,7 @@
 	<div class="header">
 		<section class="container">
 			<h1 class="float-left"><?=$config['header_title']?></h1>
-			<a href="#" class="button float-right small">RESET</a>
+			<a href="<?=$html->currentUrl()?>" class="button float-right small">RESET</a>
 		</section>
 	</div>
 	

@@ -14,7 +14,6 @@
 			$item = $item['revision_cache'];
 			$changed_files = count($item['changed_files']);
 			$repository = $repositories[$item['repository_id']];
-			//$time = date("l jS F Y - h:i A", strtotime($item['time']));
 			$time = $html->time_elapsed_string(strtotime($item['time'])) . " ago";
 		?>
 

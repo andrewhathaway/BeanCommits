@@ -30,6 +30,10 @@ class Html {
 		}
 	}
 
+	public function currentURL() {
+		return "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+	}
+
 	//Saves repeating
 	public function echoCSS($file) {
 		echo '<link rel="stylesheet" href="application/css/' . $file . '.css">';
