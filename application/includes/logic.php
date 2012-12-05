@@ -6,8 +6,14 @@
 	$html = Html::getInstance();
 	$beanstalk = Beanstalk::getInstance();
 
+	$page = 1;
+
+	if(isset($_GET['page'])) {
+		$page = $_GET['page'];
+	}
+
 	//Get feed
-	$feed = $beanstalk->request('GET', 'changesets');
+	$feed = $beanstalk->request('GET', 'changesets', array('page' => $page));
 
 	//Get repositories
 	$repos = $beanstalk->request('GET', 'repositories');

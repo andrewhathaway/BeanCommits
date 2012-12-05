@@ -33,7 +33,7 @@
 
 	</ul>
 
-	<a href="#" class="button">LOAD MORE</a>
+	<a href="<?=$html->currentURL().'?page=2'?>" class="button">LOAD MORE</a>
 
 </section>
 

@@ -34,6 +34,11 @@ class Html {
 		return "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 	}
 
+	public function baseURL() {
+		$url = $this->currentURL();
+		return explode('?', $url)[0];
+	}
+
 	//Saves repeating
 	public function echoCSS($file) {
 		echo '<link rel="stylesheet" href="application/css/' . $file . '.css">';
