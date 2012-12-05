@@ -1,5 +1,4 @@
 <?php defined('SELF') or die(); 
-	//Include header -> fires logic file
 	include_once(INCLUDES . 'header.php');
 ?>
 
@@ -10,7 +9,8 @@
 	<ul class="feed" id="feed">
 
 		<?php foreach($feed as $item): 
-			//Setup item informatiomn
+
+			//Setup item information
 			$item = $item['revision_cache'];
 			$changed_files = count($item['changed_files']);
 			$repository = $repositories[$item['repository_id']];
@@ -22,7 +22,7 @@
 
 				<div class="information">
 					<h3><?=$item['message']?></h3>
-					<p>Made <?=$changed_files?> changes in <b><?=$repository?></b> - <?=$time?></p>
+					<p>Made <?=$changed_files?> changes in <?=$repository?> - <b><?=$time?></b></p>
 					<a href="https://blogcase.beanstalkapp.com/commit-feed/changesets/<?=$item['hash_id']?>">View Commit on Beanstalk</a>
 				</div>
 
