@@ -6,10 +6,11 @@
 
 <section class="container main-body">
 
+	THIS IS VIEW
+
 	<ul class="feed" id="feed">
 
 		<?php foreach($feed as $item): 
-			var_dump($item); die;
 			//Setup item information
 			$item = $item['revision_cache'];
 			$changed_files = count($item['changed_files']);
