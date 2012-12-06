@@ -19,13 +19,9 @@
 		}
 	}
 
-	//Run the application
-
-	if(isset($_GET['commitid'])) {
-		var_dump($_GET['commitid']);
-	} else {
-		include_once(APP . 'index.php');
-	}
+	var_dump($_GET);
+	//Run app
+	include_once(APP . 'index.php');
 
 
 
