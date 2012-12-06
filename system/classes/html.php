@@ -36,7 +36,8 @@ class Html {
 
 	public function baseURL() {
 		$url = $this->currentURL();
-		return explode('?', $url)[0];
+		$new = explode('?', $url);
+		return $new[0];
 	}
 
 	//Saves repeating

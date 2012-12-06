@@ -3,7 +3,7 @@
 	//Saves including classes manually
 
 	spl_autoload_register(function($class) {
-		$path = SYS . 'classes/' . $class . '.php';
+		$path = SYS . 'classes/' . strtolower($class) . '.php';
 
 		if(file_exists($path)) {
 			include($path);
