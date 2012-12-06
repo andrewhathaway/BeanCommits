@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule ^([0-9a-z]+)$ index.php?commitid=$1 [QSA]

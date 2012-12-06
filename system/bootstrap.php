@@ -20,7 +20,13 @@
 	}
 
 	//Run the application
-	include_once(APP . 'index.php');
+
+	if(isset($_GET['commitid'])) {
+		var_dump($_GET['commitid']);
+	} else {
+		include_once(APP . 'index.php');
+	}
+
 
 
 
