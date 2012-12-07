@@ -31,6 +31,14 @@ class Beanstalk {
 			$url .= "?" . http_build_query($data);
 		}
 
+		if(isset($data['repository_id']) && !isset($data['revision'])) {
+			$url = $base . $endpoint . "/repository.json" . "?" . http_build_query($data);
+		}
+
+		if(isset($data['repository_id']) && isset($data['revision'])) {
+			$url = $base . $endpoint . "/" . $data['revision'] . ".json?repository_id=" . $data['repository_id'];
+		}
+
 		$options[CURLOPT_URL] = $url;
 
 		if($type == "POST") {

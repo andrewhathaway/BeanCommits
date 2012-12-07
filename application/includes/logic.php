@@ -12,8 +12,13 @@
 		$page = $_GET['page'];
 	}
 
+	$params = array('page' => $page);
+
+	if(isset($_GET['repository'])) $params['repository_id'] = $_GET['repository'];
+	if(isset($_GET['revision'])) $params['revision'] = $_GET['revision'];
+
 	//Get feed
-	$feed = $beanstalk->request('GET', 'changesets', array('page' => $page));
+	$feed = $beanstalk->request('GET', 'changesets', $params);
 
 	//Get repositories
 	$repos = $beanstalk->request('GET', 'repositories');
