@@ -18,14 +18,7 @@
 			$error->trigger('You need a config.php. Grab the one from the repository.');
 		}
 	}
-
-
-	// if(isset($_GET['repository'])) {
-	// 	include_once(APP . 'view.php');
-	// } else {
-	// 	include_once(APP . 'index.php');
-	// }
-
+	
 	include_once(APP . 'index.php');
 
 

@@ -5,8 +5,10 @@
 	<meta charset="UTF-8">
 	<title><?=$config['header_title']?></title>
 	<meta name="viewport" content="initial-scale=1.0">
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
-	<script type="text/javascript" src="application/js/load-more.js"></script>
+	<?php if(!isset($_GET['revision'])): ?>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="application/js/load-more.js"></script>
+	<?php endif; ?>
 	<?php $html->css(); ?>
 </head>
 <body>

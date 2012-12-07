@@ -12,7 +12,6 @@ class Html {
 		return self::$Instance;
 	}
 
-	//Includes CSS file(s) depending on Config
 	public function css() {
 		global $config;
 
@@ -42,7 +41,7 @@ class Html {
 
 	//Saves repeating
 	public function echoCSS($file) {
-		echo '<link rel="stylesheet" href="application/css/' . $file . '.css">';
+		echo '<link rel="stylesheet" href="' . BASE . '/application/css/' . $file . '.css">';
 	}
 
 	public function getGravatar($email) {
