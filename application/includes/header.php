@@ -15,7 +15,7 @@
 	<div class="header">
 		<section class="container">
 			<h1 class="float-left"><?=$config['header_title']?></h1>
-			<a href="<?=$html->baseUrl()?>" class="button float-right small">RESET</a>
+			<a href="<?=BASE?>" class="button float-right small">RESET</a>
 		</section>
 	</div>
 	
