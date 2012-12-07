@@ -29,7 +29,7 @@
 	foreach($feed as $item) {
 		//Saves repeat revision_cache index
 		if(!isset($_GET['revision'])) $item = $item['revision_cache'];
-
+		
 		//Do not add to array if contains [hide]
 		if(strpos($item['message'], '[hide]') !== false) continue;
 
