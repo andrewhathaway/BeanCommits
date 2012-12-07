@@ -38,7 +38,9 @@
 			'message' => $item['message'],
 			'gravatar' => $html->getGravatar($item['email']),
 			'changed_files' => count($item['changed_files']),
+			'repo_id' => $item['repository_id'],
 			'repository' => $repositories[$item['repository_id']],
+			'revision' => $item['revision'],
 			'time' => $html->time_elapsed_string(strtotime($item['time'])) . " ago"
 		);
 

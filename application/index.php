@@ -14,7 +14,7 @@
 
 				<div class="information">
 					<h3><?=$commit['message']?></h3>
-					<p>Made <?=$commit['changed_files']?> changes in <?=$commit['repository']?> - <b><?=$commit['time']?></b></p>
+					<p class="view">Made <?=$commit['changed_files']?> changes in <a href="<?=BASE . $commit['repo_id']?>"><?=$commit['repository']?></a> - <a href="<?=BASE . $commit['repo_id'] . '/' . $commit['revision'] ?>"><?=$commit['time']?></a></p>
 					<a href="https://blogcase.beanstalkapp.com/commit-feed/changesets/<?=$commit['hash']?>">View Commit on Beanstalk</a>
 				</div>
 				<div class="clear"></div>
