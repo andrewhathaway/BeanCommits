@@ -3,18 +3,10 @@
 	$html = Html::getInstance();
 	$beanstalk = Beanstalk::getInstance();
 
-	//Get repositories & create array
-	$repositories = array();	
-	$repos = $beanstalk->request('GET', 'repositories');
+	//Get repositories
+	$repositories = $beanstalk->getRepositories();
 
-	foreach($repos as $repo) {
-		$id = $repo['repository']['id'];
-
-		if(!isset($repositories[$id])) {
-			$repositories[$id] =  $repo['repository']['title'];
-		}
-	}
-
+	//Get feed & create array
 	$commits = array();
 	$feed = $beanstalk->getFeed();
 

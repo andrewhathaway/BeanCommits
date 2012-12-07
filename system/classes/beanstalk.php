@@ -30,6 +30,22 @@ class Beanstalk {
 		return $this->request('GET', 'changesets', $params);
 	}
 
+	public function getRepositories() {
+		$repos = $this->request('GET', 'repositories');
+
+		$repositories = array();
+
+		foreach($repos as $repository) {
+			$id = $repository['repository']['id'];
+
+			if(!isset($repositories[$id])) {
+				$repositories[$id] = $repository['repository']['title'];
+			}
+		}
+
+		return $repositories;
+	}
+
 	public function request($type, $endpoint, $data = array(), $forceError = false) {
 		global $config;
 		$error = Error::getInstance();
