@@ -11,7 +11,6 @@
 	define('INCLUDES', APP . 'includes/');
 	define('SYS', ROOT . 'system/');
 	define('BASE', "http://" . $_SERVER['SERVER_NAME'] . str_replace('index.php', '', $_SERVER['PHP_SELF']));
-	var_dump(BASE);
 
 	//Run BeanCommits - http://bukk.it/run.gif
 	include_once(SYS . 'bootstrap.php');
