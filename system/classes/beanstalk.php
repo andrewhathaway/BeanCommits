@@ -12,6 +12,24 @@ class Beanstalk {
 		return self::$Instance;
 	}
 
+	public function getFeed() {
+		$params = array(); 
+
+		if(isset($_GET['page'])) {
+			$params['page'] = $_GET['page'];
+		}
+
+		if(isset($_GET['repository'])) {
+			$params['repository_id'] = $_GET['repository'];	
+		} 
+
+		if(isset($_GET['revision'])) {
+			$params['revision'] = $_GET['revision'];
+		}
+
+		return $this->request('GET', 'changesets', $params);
+	}
+
 	public function request($type, $endpoint, $data = array(), $forceError = false) {
 		global $config;
 		$error = Error::getInstance();
