@@ -38,4 +38,7 @@ The same goes for JS files. In config.php include an item under 'js'. This can e
 ##Installation
 Installing in super easy. Grab the ZIP from Github, upload it your host and unzip. Rename config.php.default to config.php and setup your Beanstalk details. 
 
+#Footnote
+If you have any feature ideas or any question, be sure to click the link below and let me know. Thanks! 
+
 [Tweet me if you have questions](http://twitter.com/andrewhathaway)
