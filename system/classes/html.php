@@ -56,11 +56,11 @@ class Html {
 	}
 
 	public function echoJS($file) {
-		echo '<script type="text/javascript" src="' . BASE . '/application/js/' . $file . '.js' . '"></script>';
+		echo '<script type="text/javascript" src="' . BASE . 'application/js/' . $file . '.js' . '"></script>';
 	}
 
 	public function echoCSS($file) {
-		echo '<link rel="stylesheet" href="' . BASE . '/application/css/' . $file . '.css">';
+		echo '<link rel="stylesheet" href="' . BASE . 'application/css/' . $file . '.css">';
 	}
 
 	public function getGravatar($email) {
