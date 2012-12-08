@@ -12,6 +12,22 @@ class Html {
 		return self::$Instance;
 	}
 
+	public function js() {
+		global $config;
+
+		if(isset($config['js'])) {
+			if(!is_array($config['js'])) {
+				$this->echoJS($config['js']);
+			} else {
+				foreach($config['js'] as $file) {
+					$this->echoJS($file);
+				}
+			}
+		} else {
+			$this->echoJS('load-more');
+		}
+	}
+
 	public function css() {
 		global $config;
 
@@ -39,7 +55,10 @@ class Html {
 		return $new[0];
 	}
 
-	//Saves repeating
+	public function echoJS($file) {
+		echo '<script type="text/javascript" src="' . BASE . '/application/js/' . $file . '.js' . '"></script>';
+	}
+
 	public function echoCSS($file) {
 		echo '<link rel="stylesheet" href="' . BASE . '/application/css/' . $file . '.css">';
 	}
