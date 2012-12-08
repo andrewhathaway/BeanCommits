@@ -10,11 +10,13 @@
 	$commits = array();
 	$feed = $beanstalk->getFeed();
 
+	//Give index to array
+	if(count($feed) == 1)  {
+		$feed = array('0' => $feed);
+	}
+
 	foreach($feed as $item) {
-		if(!isset($_GET['revision'])) {
-			$item = $item['revision_cache'];	
-		} 
-	
+		$item = $item['revision_cache'];	
 		if(strpos($item['message'], '[hide]') !== false) continue;
 
 		$commit_info = array(
@@ -30,7 +32,6 @@
 
 		$commits[] = $commit_info;
 	}
-
 
 	if($commits == null) {
 		$error->trigger('No commit feed found. Check the config file for account settings OR commit something.'); 

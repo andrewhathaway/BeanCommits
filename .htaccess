@@ -1,3 +1,5 @@
+ErrorDocument 404 /index.php?404
+
 RewriteEngine On
 RewriteRule ^([0-9]+)$ index.php?repository=$1 [QSA]
 RewriteRule ^([0-9]+)\/([0-9a-z]+) index.php?repository=$1&revision=$2 [QSA]
