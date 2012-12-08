@@ -11,7 +11,7 @@
 	$feed = $beanstalk->getFeed();
 
 	//Give index to array
-	if(count($feed) == 1)  {
+	if(isset($feed['revision_cache']))  {
 		$feed = array('0' => $feed);
 	}
 
