@@ -18,6 +18,10 @@
 			$error->trigger('You need a config.php. Grab the one from the repository.');
 		}
 	}
+
+	if(isset($_GET['404'])) {
+		$error->trigger('This page was not found. Sorry for that.');
+	}
 	
 	include_once(APP . 'index.php');
 

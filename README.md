@@ -33,7 +33,7 @@ OR
         )
     )
 
-The same goes for JS files. In config.php include an item under 'js'. This can either be an array or a single file.
+The same goes for JS files. In config.php include an item under 'js'. This can either be an array or a single file. load-more.js is included by default, adding a 'js' item to the config file will require it to be reincluded if you are wanting to use the AJAX load more button.
     
 ##Installation
 Installing in super easy. Grab the ZIP from Github, upload it your host and unzip. Rename config.php.default to config.php and setup your Beanstalk details. 
