@@ -2,14 +2,14 @@
 
 class Beanstalk {
 			
-	private static $Instance;
+	private static $instance;
 
 	public static function getInstance() {
-		if(!self::$Instance) {
-			self::$Instance = new Beanstalk();
+		if(!self::$instance) {
+			self::$instance = new Beanstalk();
 		}
 
-		return self::$Instance;
+		return self::$instance;
 	}
 
 	public function getFeed() {

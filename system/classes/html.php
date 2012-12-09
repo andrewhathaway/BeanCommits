@@ -2,47 +2,53 @@
 
 class Html {
 
-	private static $Instance;
+	private static $instance;
 
 	public static function getInstance() {
-		if(!self::$Instance) {
-			self::$Instance = new Html();
+		if(!self::$instance) {
+			self::$instance = new Html();
 		}
 
-		return self::$Instance;
+		return self::$instance;
 	}
 
 	public function js() {
 		global $config;
+		$jshtml = '';
 
 		if(isset($config['js'])) {
 			if(!is_array($config['js'])) {
-				$this->echoJS($config['js']);
+				$jshtml .= $this->echoJS($config['js']);
 			} else {
 				foreach($config['js'] as $file) {
-					$this->echoJS($file);
+					$jshtml .= $this->echoJS($file);
 				}
 			}
 		} else {
-			$this->echoJS('load-more');
+			$jshtml .= $this->echoJS('load-more');
 		}
+
+		return $jshtml;
 	}
 
 	public function css() {
 		global $config;
+		$csshtml = '';
 
 		if(isset($config['css'])) {
 			if(!is_array($config['css'])) {
-				$this->echoCSS($config['css']);
+				$csshtml .= $this->echoCSS($config['css']);
 			} else {
 				foreach($config['css'] as $file) {
-					$this->echoCSS($file);
+					$csshtml .= $this->echoCSS($file);
 				}
 			}
 		} else {
-			$this->echoCSS('screen');
-			$this->echoCSS('animate.min');
+			$csshtml .= $this->echoCSS('screen');
+			$csshtml .= $this->echoCSS('animate.min');
 		}
+
+		return $csshtml;
 	}
 
 	public function currentURL() {
@@ -56,11 +62,11 @@ class Html {
 	}
 
 	public function echoJS($file) {
-		echo '<script type="text/javascript" src="' . BASE . 'application/js/' . $file . '.js' . '"></script>';
+		return  '<script type="text/javascript" src="' . BASE . 'application/js/' . $file . '.js' . '"></script>';
 	}
 
 	public function echoCSS($file) {
-		echo '<link rel="stylesheet" href="' . BASE . 'application/css/' . $file . '.css">';
+		return '<link rel="stylesheet" href="' . BASE . 'application/css/' . $file . '.css">';
 	}
 
 	public function getGravatar($email) {

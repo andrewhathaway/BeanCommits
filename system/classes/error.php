@@ -2,14 +2,14 @@
 
 class Error {
 
-	private static $Instance;
+	private static $instance;
 
 	public static function getInstance() {
-		if(!self::$Instance) {
-			self::$Instance = new Error();
+		if(!self::$instance) {
+			self::$instance = new Error();
 		}
 
-		return self::$Instance;
+		return self::$instance;
 	}
 
 	public function trigger($error_message) {
