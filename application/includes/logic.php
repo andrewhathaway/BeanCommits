@@ -1,5 +1,6 @@
 <?php	
 	//Required classes
+	$iOS = iOS::getInstance();
 	$html = Html::getInstance();
 	$beanstalk = Beanstalk::getInstance();
 

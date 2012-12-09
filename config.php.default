@@ -4,6 +4,5 @@
 		'account' => '',
 		'username' => '',
 		'password' => '',
-
 		'header_title' => ''
 	);

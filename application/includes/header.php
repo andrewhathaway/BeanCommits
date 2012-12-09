@@ -13,6 +13,8 @@
 	<?php endif; ?>
 	
 	<?php $html->css(); ?>
+
+	<?php $iOS->bar(); ?>
 </head>
 <body>
 	<div class="header">
