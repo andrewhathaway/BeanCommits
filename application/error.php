@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Error - Beanstalk Commits</title>
+	<link rel="shortcut icon" href="favicon.ico" />
 	<?php 
 		$html = Html::getInstance();
 		echo $html->css(); 
