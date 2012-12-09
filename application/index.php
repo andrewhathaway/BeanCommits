@@ -4,10 +4,14 @@
 
 <section class="container main-body">
 
+	<?php if(isset($_GET['repository'])): ?>
+		<h3 class="repository-name">Repository: <?=$repositories[$_GET['repository']]?></h3>
+	<?php endif; ?>
+
 	<?php if(!isset($config['hide-repository-list']) || $config['hide-repository-list'] == false): ?>
 		<ul class="repository-list">
 			<?php foreach($repositories as $id => $repo): ?>
-				<li><a href="<?=BASE . $id?>"><?=$repo?></a></li>
+				<li><a href="<?=BASE . $id?>" <?php if(isset($_GET['repository']) && $_GET['repository'] == $id) echo 'class="active"' ?>><?=$repo?></a></li>
 			<?php endforeach; ?>
 		</ul>
 	<?php endif; ?>
