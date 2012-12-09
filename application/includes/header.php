@@ -6,14 +6,9 @@
 	<title><?=$config['header_title']?></title>
 	<meta name="viewport" content="initial-scale=1.0">
 	<link rel="shortcut icon" href="favicon.ico" />
-
-	<?php if(!isset($_GET['revision'])): ?>
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
-		<?php $html->js(); ?>
-	<?php endif; ?>
-	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<?php $html->js(); ?>
 	<?php $html->css(); ?>
-
 	<?php $iOS->find(); ?>
 </head>
 <body>
