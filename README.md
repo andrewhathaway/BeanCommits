@@ -1,5 +1,7 @@
-#BeanCommints
+#BeanCommits
 BeanCommits is a free and simple commit feed for your Beanstalk repositories.
+
+[Website](http://beancommits.andrewhathaway.net)
 
 ##Features
 
