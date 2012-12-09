@@ -47,7 +47,7 @@ class Beanstalk {
 	}
 
 	public function request($type, $endpoint, $data = array(), $forceError = false) {
-		global $config;
+		$config = Config::get();
 		$error = Error::getInstance();
 
 		$base = "http://" . $config['account'] . ".beanstalkapp.com/api/";

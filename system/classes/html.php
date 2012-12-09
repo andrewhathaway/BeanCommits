@@ -13,8 +13,8 @@ class Html {
 	}
 
 	public function js() {
-		global $config;
 		$jshtml = '';
+		$config = Config::get();
 
 		if(isset($config['js'])) {
 			if(!is_array($config['js'])) {
@@ -32,8 +32,8 @@ class Html {
 	}
 
 	public function css() {
-		global $config;
 		$csshtml = '';
+		$config = Config::get();
 
 		if(isset($config['css'])) {
 			if(!is_array($config['css'])) {

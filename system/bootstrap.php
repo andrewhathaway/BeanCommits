@@ -10,7 +10,7 @@
 	$error = Error::getInstance();	
 
 	if(file_exists('config.php')) {
-		$config = require_once('config.php');
+		$config = Config::get();
 	} else {
 		if(file_exists('config.php.default')) {
 			$error->trigger('Rename config.php.default to config.php and enter details');

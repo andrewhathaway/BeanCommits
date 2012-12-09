@@ -13,8 +13,8 @@ class iOS {
 	}
 
 	public function find() {
-		global $config;
 		$ioshtml = '';
+		$config = Config::get();
 		$base = BASE . 'application/img/ios/';
 
 		if(isset($config['ios'])) {
