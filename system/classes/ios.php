@@ -42,7 +42,21 @@ class iOS {
 					$rel = 'apple-touch-icon-precomposed';
 				}
 
-				
+				if(isset($icons['57x57'])) {
+					echo '<link rel="' . $rel . '" href="' . BASE . 'application/img/ios/' . $icons['57x57'] . '">';
+				}
+
+				if(isset($icons['72x72'])) {
+					echo '<link rel="' . $rel . '" sizes="72x72"  href="' . BASE . 'application/img/ios/' . $icons['72x72'] . '">';
+				}
+
+				if(isset($icons['114x114'])) {
+					echo '<link rel="' . $rel . '" sizes="114x144" href="' . BASE . 'application/img/ios/' . $icons['114x114'] . '">';
+				}
+
+				if(isset($icons['144x144'])) {
+					echo '<link rel="' . $rel . '" sizes="144x144" href="' . BASE . 'application/img/ios/' . $icons['144x144'] . '">';
+				}
 
 			}
 		}
