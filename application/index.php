@@ -3,6 +3,15 @@
 ?>
 
 <section class="container main-body">
+
+	<?php if(!isset($config['hide-repository-list']) || $config['hide-repository-list'] == false): ?>
+		<ul class="repository-list">
+			<?php foreach($repositories as $id => $repo): ?>
+				<li><a href="<?=BASE . $id?>"><?=$repo?></a></li>
+			<?php endforeach; ?>
+		</ul>
+	<?php endif; ?>
+
 	<ul class="feed" id="feed">
 
 		<?php foreach($commits as $commit): ?>

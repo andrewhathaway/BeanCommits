@@ -82,7 +82,7 @@ If you have any feature ideas or any question, be sure to click the link below a
 [Tweet me if you have questions](http://twitter.com/andrewhathaway)
 
 
-###Complete array
+###Complete config array
     <?php 
 
         return array(
