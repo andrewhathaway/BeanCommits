@@ -16,6 +16,7 @@ BeanCommits is a free and simple commit feed for your Beanstalk repositories.
   - Easily Customisable
   - Hide commit by having [hide] in comment
   - Filter to specific repository
+  - Hideable repository list
   
 
 ##Customisation
@@ -71,7 +72,7 @@ When including your iOS web app paths, put them under an ios array like this:
 All sizes and information on iOS Web Apps is available [here.](https://github.com/AndrewHathaway/iOS-Web-App) iOS images should be in the folder application/img/ios. You then provide the filename and format. 
 
 ##Filter 
-To filter to a certain repository, add 'filter_repository' to the config file with the repository name.
+To filter to a certain repository, add 'filter_repository' to the config file with the repository name. If you want to hide the repository list, set 'hide-repository-list' to true in the config array.
     
 ##Installation
 Installing in super easy. Grab the ZIP from Github, upload it your host and unzip. Rename config.php.default to config.php and setup your Beanstalk details. 
@@ -91,6 +92,7 @@ If you have any feature ideas or any question, be sure to click the link below a
             'password' => '',
             'header_title' => '',
             'filter_repository' => '',
+            'hide-repository-list' => false,
 
             'ios' => array(
                 'app-capable' => true,

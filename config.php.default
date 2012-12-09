@@ -4,5 +4,7 @@
 		'account' => '',
 		'username' => '',
 		'password' => '',
-		'header_title' => ''
+		'header_title' => '',
+		'filter_repository' => '',
+		'hide-repository-list' => false
 	);

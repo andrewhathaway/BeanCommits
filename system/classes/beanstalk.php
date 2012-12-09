@@ -16,7 +16,7 @@ class Beanstalk {
 		$params = array(); 
 		$config = Config::get();
 
-		if(isset($config['filter_repository'])) {
+		if(isset($config['filter_repository']) && $config['filter_repository'] != '') {
 			$params['repository_id'] = array_search($config['filter_repository'], $repositories);
 		}
 

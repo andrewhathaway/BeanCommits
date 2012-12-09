@@ -5,7 +5,7 @@
 	<title>Error - Beanstalk Commits</title>
 	<?php 
 		$html = Html::getInstance();
-		$html->css(); 
+		echo $html->css(); 
 	?>
 </head>
 <body>
