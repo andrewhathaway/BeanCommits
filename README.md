@@ -72,7 +72,7 @@ When including your iOS web app paths, put them under an ios array like this:
 All sizes and information on iOS Web Apps is available [here.](https://github.com/AndrewHathaway/iOS-Web-App) iOS images should be in the folder application/img/ios. You then provide the filename and format. 
 
 ##Filter 
-To filter to a certain repository, add 'filter_repository' to the config file with the repository name. If you want to hide the repository list, set 'hide-repository-list' to true in the config array.
+To filter to a certain repository, add 'filter_repository' to the config file with the repository name. If you want to hide the repository list, set 'hide-repository-list' to true in the config array. Commits that you do not want to show in the feed, add [hide] to the message. 
     
 ##Installation
 Installing in super easy. Grab the ZIP from Github, upload it your host and unzip. Rename config.php.default to config.php and setup your Beanstalk details. 
