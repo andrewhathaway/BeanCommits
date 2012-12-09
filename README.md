@@ -10,6 +10,7 @@ BeanCommits is a free and simple commit feed for your Beanstalk repositories.
   - Clean look & feel
   - AJAX loading of items
   - Gravatar profile pictures
+  - iOS Web App built in
   - View commits for repository
   - View single commit
   - Easily Customisable
@@ -36,6 +37,37 @@ OR
     )
 
 The same goes for JS files. In config.php include an item under 'js'. This can either be an array or a single file. load-more.js is included by default, adding a 'js' item to the config file will require it to be reincluded if you are wanting to use the AJAX load more button.
+
+When including your iOS web app paths, put them under an ios array like this:
+
+  'ios' => array(
+      'app-capable' => true,
+      'status-bar' => 'default',
+      'detect-format' => true,
+      'app-title' => 'BeanCommits',
+      'app-icons' => array(
+        'precomposed' => true,
+        '57x57' => 'path-to-57x57',
+        '72x72' => 'path-to-72x72',
+        '114x114' => 'path-to-114x114',
+        '144x144' => 'path-to-144x144'
+      ),
+      'start-screens' => array(
+        '320x460' => 'path-to-320x460',
+        '640x920' => 'path-to-640x1096',
+        '640x1096' => 'path-to-640x1096',
+        'landscape' => array(
+          '1024x748' => 'path-to-1024x748',
+          '2048x1496' => 'path-to-2048x1496'
+        ),
+        'portrait' => array(
+          '768x1004' => 'path-to-768x1004',
+          '1536x2008' => 'path-to-1536x2008'
+        )
+      )
+    )
+
+All sizes and information on iOS Web Apps is available [here.](https://github.com/AndrewHathaway/iOS-Web-App)
     
 ##Installation
 Installing in super easy. Grab the ZIP from Github, upload it your host and unzip. Rename config.php.default to config.php and setup your Beanstalk details. 

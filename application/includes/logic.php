@@ -15,7 +15,7 @@
 	if(isset($feed['revision_cache']))  {
 		$feed = array('0' => $feed);
 	}
-
+	
 	foreach($feed as $item) {
 		$item = $item['revision_cache'];	
 		if(strpos($item['message'], '[hide]') !== false) continue;
