@@ -12,7 +12,7 @@ class iOS {
 		return self::$Instance;
 	}
 
-	public function bar() {
+	public function find() {
 		global $config;
 
 		if(isset($config['ios'])) {

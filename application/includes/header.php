@@ -14,7 +14,7 @@
 	
 	<?php $html->css(); ?>
 
-	<?php $iOS->bar(); ?>
+	<?php $iOS->find(); ?>
 </head>
 <body>
 	<div class="header">
