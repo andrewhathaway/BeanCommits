@@ -21,7 +21,6 @@
 		if(strpos($item['message'], '[hide]') !== false) continue;
 
 		$commit_info = array(
-			'hash' => $item['hash_id'],
 			'message' => $item['message'],
 			'gravatar' => $html->getGravatar($item['email']),
 			'changed_files' => count($item['changed_files']),
@@ -30,6 +29,13 @@
 			'revision' => $item['revision'],
 			'time' => $html->time_elapsed_string(strtotime($item['time'])) . " ago"
 		);
+
+		if(!isset($item['hash_id'])) {
+			$commit_info['hash'] = $item['revision'];
+		} else {
+			$commit_info['hash'] = $item['hash_id'];
+		}
+
 
 		$commits[] = $commit_info;
 	}
