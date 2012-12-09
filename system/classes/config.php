@@ -1,7 +1,7 @@
-<?php
+<?php defined('SELF') or die();
 
 class Config {
-	
+
 	private static $config;
 
 	public static function get() {
