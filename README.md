@@ -80,3 +80,42 @@ Installing in super easy. Grab the ZIP from Github, upload it your host and unzi
 If you have any feature ideas or any question, be sure to click the link below and let me know. Thanks! 
 
 [Tweet me if you have questions](http://twitter.com/andrewhathaway)
+
+
+###Complete array
+    <?php 
+
+  return array(
+    'account' => '',
+    'username' => '',
+    'password' => '',
+    'header_title' => '',
+    'filter_repository' => '',
+
+    'ios' => array(
+      'app-capable' => true,
+      'status-bar' => 'default',
+      'detect-format' => true,
+      'app-title' => 'BeanCommits',
+      'app-icons' => array(
+        'precomposed' => true,
+        '57x57' => 'path-to-57x57',
+        '72x72' => 'path-to-72x72',
+        '114x114' => 'path-to-114x114',
+        '144x144' => 'path-to-144x144'
+      ),
+      'start-screens' => array(
+        '320x460' => 'path-to-320x460',
+        '640x920' => 'path-to-640x1096',
+        '640x1096' => 'path-to-640x1096',
+        'landscape' => array(
+          '1024x748' => 'path-to-1024x748',
+          '2048x1496' => 'path-to-2048x1496'
+        ),
+        'portrait' => array(
+          '768x1004' => 'path-to-768x1004',
+          '1536x2008' => 'path-to-1536x2008'
+        )
+      )
+    )
+  );
