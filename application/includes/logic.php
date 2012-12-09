@@ -9,7 +9,7 @@
 
 	//Get feed & create array
 	$commits = array();
-	$feed = $beanstalk->getFeed();
+	$feed = $beanstalk->getFeed($repositories);
 
 	//Give index to array
 	if(isset($feed['revision_cache']))  {

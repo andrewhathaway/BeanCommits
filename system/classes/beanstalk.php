@@ -12,8 +12,13 @@ class Beanstalk {
 		return self::$instance;
 	}
 
-	public function getFeed() {
+	public function getFeed($repositories) {
 		$params = array(); 
+		$config = Config::get();
+
+		if(isset($config['filter_repository'])) {
+			$params['repository_id'] = array_search($config['filter_repository'], $repositories);
+		}
 
 		if(isset($_GET['page'])) {
 			$params['page'] = $_GET['page'];
