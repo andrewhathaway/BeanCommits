@@ -46,16 +46,10 @@ class iOS {
 					echo '<link rel="' . $rel . '" href="' . BASE . 'application/img/ios/' . $icons['57x57'] . '">';
 				}
 
-				if(isset($icons['72x72'])) {
-					echo '<link rel="' . $rel . '" sizes="72x72"  href="' . BASE . 'application/img/ios/' . $icons['72x72'] . '">';
-				}
+				unset($icons['57x57'], $icons['precomposed']);
 
-				if(isset($icons['114x114'])) {
-					echo '<link rel="' . $rel . '" sizes="114x144" href="' . BASE . 'application/img/ios/' . $icons['114x114'] . '">';
-				}
-
-				if(isset($icons['144x144'])) {
-					echo '<link rel="' . $rel . '" sizes="144x144" href="' . BASE . 'application/img/ios/' . $icons['144x144'] . '">';
+				foreach($icons as $key => $path) {
+					echo '<link rel="' . $rel . '" sizes="' . $key . '"  href="' . BASE . 'application/img/ios/' . $path . '">';
 				}
 
 			}
