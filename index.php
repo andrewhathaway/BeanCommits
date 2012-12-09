@@ -1,7 +1,10 @@
 <?php 
 
 	//BEANCOMMITS -> This file sets defintions up and runs the Bootstrap file
-		
+			
+	//Turn off errors
+	error_reporting(0);
+
 	//Running in system
 	define('SELF', true);
 
