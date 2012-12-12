@@ -93,6 +93,13 @@ If you have any feature ideas or any question, be sure to click the link below a
             'header_title' => '',
             'filter_repository' => '',
             'hide-repository-list' => false,
+            
+            'css' => array(
+                'somefile',
+                'another file'
+            ),
+            
+            'js' => 'just-one-file',
 
             'ios' => array(
                 'app-capable' => true,
